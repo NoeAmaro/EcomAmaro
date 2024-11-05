@@ -13,7 +13,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Obtener el carrito del localStorage
             const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
             const listaCarrito = document.getElementById("lista-carrito");
 
@@ -28,7 +27,7 @@
                         <p><strong>Nombre:</strong> ${producto.nombre}</p>
                         <p><strong>Precio:</strong> ${producto.precio}</p>
                     `;
-                    
+
                     listaCarrito.appendChild(productoDiv);
                 });
             }
@@ -36,3 +35,4 @@
     </script>
 </body>
 </html>
+
