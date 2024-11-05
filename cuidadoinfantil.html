@@ -456,18 +456,35 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const botonesCarrito = document.querySelectorAll(".agregar-al-carrito");
 
-  <script>
-    function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-    }
+        botonesCarrito.forEach(boton => {
+            boton.addEventListener("click", function () {
+                const producto = boton.closest(".product_box");
+                const nombre = producto.querySelector(".nombre").innerText; // Obtén el nombre del producto
+                const precio = producto.querySelector(".precio").innerText; // Obtén el precio del producto
+                const id = boton.getAttribute("data-id"); // Obtén el ID del producto
 
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-    }
-  </script>
+                const productoCarrito = {
+                    id: id,
+                    nombre: nombre,
+                    precio: precio
+                };
+
+                // Obtén el carrito de localStorage o crea uno nuevo si no existe
+                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                carrito.push(productoCarrito); // Agrega el producto al carrito
+                localStorage.setItem("carrito", JSON.stringify(carrito)); // Guarda el carrito en localStorage
+
+                console.log(carrito); // Muestra el carrito en la consola para verificar
+                alert("Producto agregado al carrito"); // Mensaje de confirmación
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>
