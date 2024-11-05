@@ -482,19 +482,44 @@
     </p>
   </section>
   <!-- footer section -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <div id="lista-carrito">
+        <!-- Los productos se mostrarán aquí -->
+    </div>
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            const listaCarrito = document.getElementById("lista-carrito");
 
-  <script>
-    function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-    }
+            if (carrito.length === 0) {
+                listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
+            } else {
+                carrito.forEach(producto => {
+                    const productoDiv = document.createElement("div");
+                    productoDiv.classList.add("producto");
 
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-    }
-  </script>
+                    productoDiv.innerHTML = `
+                        <p><strong>Nombre:</strong> ${producto.nombre}</p>
+                        <p><strong>Precio:</strong> ${producto.precio}</p>
+                    `;
+
+                    listaCarrito.appendChild(productoDiv);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
 </body>
 
 </html>
