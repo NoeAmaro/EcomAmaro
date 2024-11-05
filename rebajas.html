@@ -272,64 +272,64 @@
   <!-- end sign section -->
 
   <!-- info section -->
-  <section class="info_section layout_padding">
+ <section class="info_section layout_padding">
     <div class="container links_container">
       <div class="row ">
         <div class="col-md-3">
           <h3>
-            CUSTOMER SERVICE
+            SERVICIO AL CLIENTE
           </h3>
           <ul>
             <li>
               <a href="">
-                International Help
+              Ayuda
               </a>
             </li>
             <li>
               <a href="">
-                Contact Customer Care
+                Contactanos
               </a>
             </li>
             <li>
               <a href="">
-                Return Policy
+               Saber mas
               </a>
             </li>
             <li>
               <a href="">
-                Privacy Policy
+                Leyes de privacidad
               </a>
             </li>
             <li>
               <a href="">
-                Shipping Information
+                Informacion importante
               </a>
             </li>
             <li>
               <a href="">
-                Promotion Terms
+               Terminos y condiciones
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>
-            LET US HELP YOU
+            VAYAMOS YA 
           </h3>
           <ul>
             <li>
               <a href="">
-                Your Account
+                Tu usuario 
               </a>
             </li>
             <li>
               <a href="">
-                Your Orders
+                Tus Pedidos
               </a>
             </li>
             <li>
               <a href="">
-                Shipping Rates & Policies
+                Politicasa
               </a>
             </li>
             <li>
@@ -344,81 +344,81 @@
             </li>
             <li>
               <a href="">
-                Help
+                Ayuda
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>
-            INFORMATION
+            INFORMACION 
           </h3>
           <ul>
             <li>
               <a href="">
-                About Us
+                Saber mas
+              </a>
+            </li>
+            <li>
+              <a href="cuidadoinfantil.html">
+                Cuidado infantil 
+              </a>
+            </li>
+            <li>
+              <a href="product.html">
+                Compras 
               </a>
             </li>
             <li>
               <a href="">
-                Careers
+                Noticias
+              </a>
+            </li>
+            <li>
+              <a href="rebajas.html">
+                Rebajas
               </a>
             </li>
             <li>
               <a href="">
-                Sell on shop
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Press & News
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Competitions
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Terms & Conditions
+                Terminos y condiciones 
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3>
-            OUR SHOP
+            Tus compras
           </h3>
           <ul>
             <li>
-              <a href="">
-                Daily Deals
+              <a href="pago.html">
+                Pagos
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                Contacto
               </a>
             </li>
             <li>
               <a href="">
-                App Only Deals
+                mas productos
               </a>
             </li>
             <li>
-              <a href="">
-                Our Hottest Products
+              <a href="niñas.html">
+                Todo para tu niña
               </a>
             </li>
             <li>
-              <a href="">
-                Gift Vouchers
+              <a href="niños.html">
+                todo para tu niño
               </a>
             </li>
             <li>
-              <a href="">
-                Trending Product
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Hot Flash Sale
+              <a href="rebajas.html">
+               hoy sale
               </a>
             </li>
           </ul>
@@ -472,26 +472,26 @@
   <!-- end info section -->
 
   <!-- footer section -->
-  document.addEventListener("DOMContentLoaded", function () {
-    const botonesCarrito = document.querySelectorAll(".agregar-al-carrito");
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2019 All Rights Reserved By
+      <a href="https://html.design/">Diseños Amaro</a>
+    </p>
+  </section>
+  <!-- footer section -->
 
-    botonesCarrito.forEach(boton => {
-        boton.addEventListener("click", function () {
-            // Obtener el contenedor del producto y sus datos
-            const producto = boton.closest(".product_box");
-            const nombre = producto.querySelector(".nombre").innerText;
-            const precio = producto.querySelector(".precio").innerText;
-            const id = boton.getAttribute("data-id");
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 
-            // Crear un objeto con la información del producto
-            const productoCarrito = {
-                id: id,
-                nombre: nombre,
-                precio: precio
-            };
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
 
-            
-
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
 </body>
 
 </html>
